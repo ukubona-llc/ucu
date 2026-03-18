@@ -1061,6 +1061,33 @@ footer {
   .map-layout { grid-template-columns: 1fr; }
   #main-map { height: 380px; }
 }
+
+/* New whisper cards for pentad sections */
+.pentad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+
+.pentad-card {
+  background: var(--paper);
+  padding: 32px;
+  transition: background 0.2s;
+}
+
+.pentad-card:hover { background: var(--cream); }
+
+.pentad-stack {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 8px;
+}
 </style>
 </head>
 <body>
@@ -1108,6 +1135,7 @@ footer {
   <a class="nav-brand" href="#">Uganda Renal Atlas</a>
   <a class="nav-link" href="#burden">Scale</a>
   <a class="nav-link" href="#risk">Risk Factors</a>
+  <a class="nav-link" href="#pentad">Pentad Whispers</a>
   <a class="nav-link" href="#map">The Map</a>
   <a class="nav-link" href="#transplant">Transplant</a>
   <a class="nav-link" href="#deliverables">Deliverables</a>
@@ -1251,6 +1279,64 @@ footer {
     </div>
   </div>
 </div>
+
+<!-- NEW: PENTAD WHISPERS — PERSON + HOUSEHOLD + SYSTEMS + REGULATORS + CIVILIZATIONAL PLANNERS -->
+<section class="section" id="pentad">
+  <div class="reveal">
+    <div class="section-kicker">Town-Square Signals · 2025–2026</div>
+    <h2 class="section-title">Pentad Whispers:<br>What the Ground Actually Says</h2>
+    <p class="section-intro">These are the signals academics and funders rarely hear in grant tables — raw voices from persons, households, clinics, regulators, and civilizational planners. They turn the atlas from a map into a living civilizational instrument.</p>
+  </div>
+
+  <div class="pentad-grid reveal">
+    <!-- Person -->
+    <div class="pentad-card">
+      <div class="pentad-stack">PERSON</div>
+      <div class="stat-num" style="font-size:2.4rem; color:#c0392b">Sudden collapse</div>
+      <div class="stat-body">“I woke with stomach pain… next day I could not walk. Ulcer they said, then chronic kidney failure.” — Patient stories on X and Monitor 2025–2026. Headaches misdiagnosed as pregnancy aftermath; spiritual fog; bone pain; daily fear of missing the next session.</div>
+      <div class="stat-cite">Monitor Uganda · Carolyn Atim & Irene Nerima stories · 2025</div>
+    </div>
+
+    <!-- Household -->
+    <div class="pentad-card">
+      <div class="pentad-stack">HOUSEHOLD / KIN NETWORKS</div>
+      <div class="stat-num" style="font-size:2.4rem; color:#d87030">Land sales</div>
+      <div class="stat-body">“If any of us got sick, you will sell all your land to maintain this.” Families remitting from abroad, grandparents raising grandchildren, children dropping out of school. Depression in CKD patients 2× national average. Out-of-pocket monthly burden often exceeds UGX 4.8–5 million.</div>
+      <div class="stat-cite">Dr. Charles Kabugo, Kiruddu ED to Parliament PAC, 16 Mar 2026 · NPA State of Uganda Population Report 2025</div>
+    </div>
+
+    <!-- Systems -->
+    <div class="pentad-card">
+      <div class="pentad-stack">SYSTEMS (Clinics / Hospitals / Insurance)</div>
+      <div class="stat-num" style="font-size:2.4rem; color:#d4b832">Subsidy cliff</div>
+      <div class="stat-body">Kiruddu: UGX 60,000/session (government subsidised) vs private market UGX 400–500,000. Only 4 centres historically; queues, infection risks, repeated travel. Aflatoxin-contaminated groundnuts and beans in markets flagged as upstream driver by Kiruddu ED.</div>
+      <div class="stat-cite">Dr. Charles Kabugo to Parliament PAC, 16 Mar 2026 · MoH Annual Health Sector Performance Report FY 2023/24</div>
+    </div>
+
+    <!-- Regulators -->
+    <div class="pentad-card">
+      <div class="pentad-stack">REGULATORS (MoH / GoU)</div>
+      <div class="stat-num" style="font-size:2.4rem; color:#27ae60">Regulatory limbo</div>
+      <div class="stat-body">MoH Integrated CKD Management Guidelines (Jan 2024) acknowledge unexplained cases dominant. Transplant pilot suspended 2024 pending full framework. Parliament Health Committee demands extra Shs 2 billion for dialysis shortfalls. Auditor General flags long-term unsustainability of dialysis vs transplant.</div>
+      <div class="stat-cite">MoH Integrated CKD Guidelines Jan 2024 · Parliament Hansard PAC 16 Mar 2026</div>
+    </div>
+
+    <!-- Civilizational Planners -->
+    <div class="pentad-card">
+      <div class="pentad-stack">CIVILIZATIONAL PLANNERS (NPA / UCU / Funders)</div>
+      <div class="stat-num" style="font-size:2.4rem; color:#2980b9">Mental-health linkage</div>
+      <div class="stat-body">NPA State of Uganda Population Report 2025 declares mental health a “silent emergency” — facility cases up 71% in four years; CKD doubles depression prevalence. UCU 2026–2030 research agenda aligns atlas with NDP IV and national disease intelligence. WHO / ISN / NIH pathways now require district-level evidence this atlas supplies.</div>
+      <div class="stat-cite">NPA SUPRE 2025 (launched Feb 2026) · UCU Research Agenda Stakeholder Consultation 2026</div>
+    </div>
+  </div>
+
+  <div class="pull-quote reveal">
+    <p>"Dialysis is very expensive, extremely expensive. It is not sustainable for any one of us. If any of us got sick, you will sell all your land to be able to maintain this."</p>
+    <cite>— Dr. Charles Kabugo, Executive Director Kiruddu National Referral Hospital, before Parliament Public Accounts Committee, 16 March 2026</cite>
+  </div>
+</section>
+
+<div class="section-rule"></div>
 
 <!-- MAP SECTION -->
 <div class="map-section" id="map">
