@@ -58,6 +58,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .meta-value a{color:var(--amber);text-decoration:none;}
 .meta-value a:hover{color:var(--paper);}
 .meta-badge-live{font-family:'IBM Plex Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(75,212,122,0.15);color:#4bd47a;border:1px solid rgba(75,212,122,0.3);padding:2px 7px;border-radius:2px;margin-left:6px;}
+.meta-badge-action{font-family:'IBM Plex Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,123,26,0.2);color:var(--amber);border:1px solid rgba(201,123,26,0.4);padding:2px 7px;border-radius:2px;margin-left:6px;}
 
 #hero-map{position:absolute;inset:0;opacity:0;animation:fadeIn 1.2s 0.9s ease forwards;}
 .hero-map-label{position:absolute;bottom:0;left:0;right:0;padding:20px 32px;background:linear-gradient(to top,rgba(238,233,218,1) 0%,rgba(238,233,218,0) 100%);z-index:1000;pointer-events:none;}
@@ -152,6 +153,18 @@ nav a.nav-link:hover{color:var(--rust);border-bottom-color:var(--rust);}
 .cadence-label{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem;}
 .cadence-body{font-family:'Source Serif 4',serif;font-size:0.95rem;font-style:italic;color:rgba(247,242,233,0.75);line-height:1.65;}
 .cadence-body strong{color:var(--paper);font-style:normal;}
+
+/* ── ACTION ITEMS BOX ── */
+.action-items-box{background:rgba(201,123,26,0.07);border:1px solid rgba(201,123,26,0.2);border-left:3px solid var(--amber);padding:1.4rem 1.8rem;margin-top:16px;}
+.action-items-label{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;}
+.action-items-label::after{content:'22 APR 2026 MEETING';font-size:0.5rem;letter-spacing:0.08em;color:rgba(201,123,26,0.5);margin-left:auto;}
+.action-item{display:flex;align-items:flex-start;gap:0.8rem;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.action-item:last-child{border-bottom:none;}
+.ai-owner{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);min-width:80px;padding-top:2px;flex-shrink:0;}
+.ai-owner.robert{color:#5ba3d4;}
+.ai-owner.all{color:rgba(247,242,233,0.35);}
+.ai-text{font-family:'Source Serif 4',serif;font-size:0.88rem;color:rgba(247,242,233,0.65);line-height:1.55;}
+.ai-text strong{color:var(--paper);}
 
 /* ── FULBRIGHT BOX ── */
 .fulbright-band{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:48px 64px;}
@@ -391,8 +404,8 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
 <div class="revision-banner">
   <div class="rb-dot"></div>
   <div>
-    <span class="rb-text"><strong>Updated Brief · April 2026 ·</strong></span>
-    <span class="rb-text"> Fulbright submitted 10 Apr with Althoff letter · Track 2 HIV-IBBS activated (PAR-24-329) · Meeting cadence: every 2 weeks, Thursdays 4pm</span>
+    <span class="rb-text"><strong>Post-Meeting Update · 22 Apr 2026 ·</strong></span>
+    <span class="rb-text"> Action items confirmed · Next meeting Tue 7 May 4pm · Grant shortlist due by Mon 28 Apr · Focus: PAR-24-329 + NIDDK R21</span>
   </div>
 </div>
 
@@ -420,14 +433,14 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       </div>
       <div class="hero-meta-row">
         <span class="meta-label">Fulbright</span>
-        <span class="meta-value">Submitted 10 Apr 2026 · Althoff (JHU) letter of support confirmed<span class="meta-badge-live">submitted</span></span>
+        <span class="meta-value">Submitted 10 Apr 2026 · Althoff (JHU) letter confirmed<span class="meta-badge-live">submitted</span></span>
       </div>
       <div class="hero-meta-row">
-        <span class="meta-label">Grant Tracks</span>
-        <span class="meta-value">Track 1: CKD/NIDDK · Track 2: HIV-IBBS/PAR-24-329</span>
+        <span class="meta-label">Next Meeting</span>
+        <span class="meta-value">Tuesday 7 May 2026 · 4pm<span class="meta-badge-action">confirmed</span></span>
       </div>
       <div class="hero-meta-row">
-        <span class="meta-label">Live Demo/Concept</span>
+        <span class="meta-label">Live Platform</span>
         <span class="meta-value"><a href="https://ukubona-llc.github.io/landscape/" target="_blank">ukubona-llc.github.io/landscape/ ↗</a></span>
       </div>
     </div>
@@ -469,6 +482,31 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       <p class="section-intro">The collaboration is operating on two parallel grant tracks. Track 1 (CKD Atlas) anchors the scientific foundation — 146-district geospatial mapping of kidney disease burden. Track 2 (HIV-IBBS) is the NIH-funded implementation science arm, targeting people who use substances in Uganda using an AI-driven integrated bio-behavioral surveillance system. HIV is a major driver of CKD in Ugandan populations, and APOL1 high-risk variants in East African populations amplify this relationship. The tracks are scientifically linked and institutionally complementary.</p>
     </div>
 
+    <!-- ACTION ITEMS — inserted from April 22 meeting -->
+    <div class="action-items-box reveal">
+      <div class="action-items-label">Action Items Confirmed</div>
+      <div class="action-item">
+        <div class="ai-owner">Ukubona</div>
+        <div class="ai-text"><strong>Grant shortlist document</strong> — update shared doc with specific PA numbers, links to NIH/Wellcome calls, ordered by priority and deadline. Due by <strong>Monday 28 April</strong>.</div>
+      </div>
+      <div class="action-item">
+        <div class="ai-owner">Ukubona</div>
+        <div class="ai-text"><strong>Automated systematic review</strong> — explore AI tools to produce a preliminary systematic review paper on CKD/risk factors in Uganda. Initial output to share before next meeting.</div>
+      </div>
+      <div class="action-item">
+        <div class="ai-owner robert">Robert</div>
+        <div class="ai-text"><strong>Send partner contacts</strong> — email contacts for Boniface and other named partners to Ukubona so the team can be formally introduced and cc'd on next steps.</div>
+      </div>
+      <div class="action-item">
+        <div class="ai-owner all">All</div>
+        <div class="ai-text"><strong>Review updated doc</strong> — read the prioritised grant list before next meeting and come with a <strong>single call to focus on first</strong>. The meeting agreed not to pursue multiple calls simultaneously.</div>
+      </div>
+      <div class="action-item">
+        <div class="ai-owner all">All</div>
+        <div class="ai-text"><strong>Next meeting: Tuesday 7 May, 4pm</strong> — agenda: lock in the primary grant mechanism, assign application sections, and review the automated systematic review output.</div>
+      </div>
+    </div>
+
     <div class="tracks-grid reveal">
 
       <!-- TRACK 1: CKD -->
@@ -488,18 +526,25 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
             <div class="tg-fit">PA-21-213 — Global health geospatial CKD burden. The 12.5% vs 3.9% East/West prevalence differential is the study-section-winning premise. UCU student extraction pipeline produces the preliminary data package.</div>
           </div>
           <div class="track-grant">
+            <div class="tg-org">NIH · NIDDK — PAR-25-068</div>
+            <div class="tg-name">Pilot Studies: Biological, Behavioral & Social Mechanisms — HIV Pathogenesis within NIDDK Mission</div>
+            <div class="tg-amount">R21 · ~$275,000 · 2 years</div>
+            <div class="tg-deadline"><span class="deadline-dot deadline-soon"></span>Standard cycle: June 16 · Oct 16, 2026</div>
+            <div class="tg-fit">The HIV-CKD-APOL1 bridge mechanism. Directly funds HIV × kidney mechanistic pilot work. Ideal to link both tracks biologically and institutionally under one NIDDK application. Confirmed eligible for foreign orgs (UCU as sub).</div>
+          </div>
+          <div class="track-grant">
             <div class="tg-org">ISN · SOROCA</div>
             <div class="tg-name">Special Operations for Renal Outcomes in Central Africa</div>
             <div class="tg-amount">$10,000 – $50,000 · 1 year</div>
-            <div class="tg-deadline"><span class="deadline-dot deadline-open"></span>Rolling applications · check ISN website each quarter</div>
-            <div class="tg-fit">Ideal seed grant to generate Phase II data for the NIDDK R21. UCU–Hopkins profile is exactly the intended partnership model.</div>
+            <div class="tg-deadline"><span class="deadline-dot deadline-open"></span>Rolling · check ISN website each quarter</div>
+            <div class="tg-fit">Logical first submission — seed data for the NIDDK R21. UCU–Hopkins profile is exactly the intended partnership model.</div>
           </div>
           <div class="track-grant">
             <div class="tg-org">Wellcome Trust</div>
             <div class="tg-name">African Programmes in Science</div>
             <div class="tg-amount">£150,000 – £500,000 · 3–5 years</div>
             <div class="tg-deadline"><span class="deadline-dot deadline-open"></span>Expression of Interest — rolling</div>
-            <div class="tg-fit">CKD–HIV intersection aligns with Wellcome's infectious/non-communicable disease boundary priority. Basaza + UCU student pipeline makes this compelling.</div>
+            <div class="tg-fit">CKD–HIV intersection aligns with Wellcome's infectious/NCD boundary priority. Basaza + UCU student pipeline is compelling. APOL1 × HIV framing is novel for Uganda.</div>
           </div>
         </div>
       </div>
@@ -510,29 +555,29 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
         <div class="track-title">AI-Driven HIV Surveillance<br>Among People Who Use Substances</div>
         <div class="track-nofo">
           <span class="track-nofo-badge">Active NOFO</span>
-          NIH PAR-24-329 · NIAID / NIDA
+          NIH PAR-24-329 · NIDA
         </div>
         <div class="track-grants">
           <div class="track-grant">
-            <div class="tg-org">NIH · PAR-24-329 · NIAID / NIDA</div>
+            <div class="tg-org">NIH · PAR-24-329 · NIDA</div>
             <div class="tg-name">HIV Prevention, Treatment, Adherence & Program Implementation — Sub-Saharan Africa</div>
-            <div class="tg-amount">Pilot R01 or R21 equivalent</div>
-            <div class="tg-deadline"><span class="deadline-dot deadline-urgent"></span>Monthly deadlines — HIV special status · next: check grants.gov</div>
-            <div class="tg-fit">Boniface's AI-IBBS concept note targets PWUS (people who use substances) in Uganda — HIV prevalence ~17% vs 6% national average. Cluster-randomised trial: AI-driven IBBS vs standard DHIS2. Three domains: HIV prevention, treatment/adherence, program implementation. UCU + CCEPO + US partners already named.</div>
+            <div class="tg-amount">R34 Planning Grant · up to $450K direct / 3 yrs</div>
+            <div class="tg-deadline"><span class="deadline-dot deadline-urgent"></span>Next AIDS deadline: <strong>7 May 2026</strong> · then Sep 7 · Jan 7</div>
+            <div class="tg-fit">Boniface's AI-IBBS concept note is built for this NOFO. Uganda PWUS — HIV prevalence ~17% vs 6% national. Three domains: HIV prevention, treatment/adherence, program implementation. UCU + CCEPO + JHU named. Foreign orgs (UCU) eligible as direct applicants. HIV special status = monthly cycles. <strong>May 7 is the most strategic window.</strong></div>
           </div>
           <div class="track-grant">
             <div class="tg-org">NIH · NIAID</div>
             <div class="tg-name">HIV/AIDS Research Supplements (Admin. Supplements)</div>
             <div class="tg-amount">$50,000 – $150,000 · 1–2 years</div>
             <div class="tg-deadline"><span class="deadline-dot deadline-open"></span>Parent grant-dependent · rolling</div>
-            <div class="tg-fit">If Track 1 R21 is funded, HIV as a CKD risk factor in APOL1-variant populations justifies an administrative supplement to add a behavioral arm. Links both tracks institutionally.</div>
+            <div class="tg-fit">If Track 1 R21 is funded, HIV as a CKD risk factor in APOL1-variant populations justifies an admin supplement to add a behavioral arm. Links both tracks institutionally.</div>
           </div>
           <div class="track-grant">
             <div class="tg-org">Uganda NPA</div>
             <div class="tg-name">Health Intelligence Pilot — Mental Health Surveillance</div>
             <div class="tg-amount">$30,000 – $80,000 · proof of concept</div>
             <div class="tg-deadline"><span class="deadline-dot deadline-open"></span>NPA budget cycle · next window Q3 2026</div>
-            <div class="tg-fit">CKD doubles depression prevalence. The atlas is simultaneously a mental health surveillance instrument. NPA declared mental health a "silent emergency" (SUPRE 2025). This is the domestic funding hook.</div>
+            <div class="tg-fit">CKD doubles depression prevalence. NPA declared mental health a "silent emergency" (SUPRE 2025). The atlas is simultaneously a mental health surveillance instrument. This is the domestic funding hook.</div>
           </div>
         </div>
       </div>
@@ -546,11 +591,11 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       </div>
     </div>
 
-    <!-- Meeting cadence -->
+    <!-- Meeting cadence — updated from April 22 meeting -->
     <div class="cadence-box reveal" style="border-left-color:var(--amber);margin-top:16px;">
-      <div class="cadence-label" style="color:var(--amber);">Meeting Cadence — Confirmed</div>
+      <div class="cadence-label" style="color:var(--amber);">Meeting Cadence — Updated Post 22 April</div>
       <div class="cadence-body">
-        UCU × Ukubona meets <strong>every two weeks, Thursdays at 4pm.</strong> Today's session: Tuesday 22 April, 3pm. Next regular session: Thursday 1 May, 4pm. Between sessions: WhatsApp and shared document review. Next deliverable due before May 1: grant mechanism shortlist with PA numbers, ranked by submission deadline.
+        UCU × Ukubona meets <strong>every two weeks, Thursdays at 4pm</strong> (regular cadence). The April 22 session was an off-cycle Tuesday catch-up. <strong>Next confirmed session: Tuesday 7 May, 4pm.</strong> Between sessions: WhatsApp and shared document review. Before 7 May: Ukubona posts grant shortlist, Robert sends partner contacts, all parties review and rank a primary call.
       </div>
     </div>
 
@@ -888,14 +933,14 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
           <div class="tl-dot"></div>
           <div>
             <div class="tl-year">April 2026 — Active</div>
-            <div class="tl-event"><strong>Ukubona × UCU collaboration is live.</strong> Atlas deployed. Two grant tracks active. Fulbright submitted. Meeting cadence confirmed: every two weeks, Thursdays 4pm. Prof. Basaza co-PI. Boniface leading Track 2 (HIV-IBBS / PAR-24-329).</div>
+            <div class="tl-event"><strong>Ukubona × UCU collaboration is live.</strong> Atlas deployed. Two grant tracks active. Fulbright submitted. Action items confirmed at 22 Apr meeting. Next session: Tuesday 7 May 4pm.</div>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-dot" style="border-color:var(--teal);"></div>
           <div>
-            <div class="tl-year" style="color:var(--teal);">Next: June / Oct 2026</div>
-            <div class="tl-event">First grant submissions: NIDDK R21 (June 16 standard deadline) and PAR-24-329 HIV track (monthly). ISN-SOROCA seed application. UCU student Phase II extraction begins. First district-level data paper submitted.</div>
+            <div class="tl-year" style="color:var(--teal);">Next: May / June 2026</div>
+            <div class="tl-event">7 May meeting: lock primary grant mechanism. Grant shortlist finalized by 28 Apr. PAR-24-329 May 7 AIDS deadline window. NIDDK R21 June 16 standard deadline. UCU student Phase II extraction begins.</div>
           </div>
         </div>
       </div>
@@ -949,13 +994,13 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
     </div>
     <div>
       <div class="method-box">
-        <div class="method-box-title">Phase-by-phase plan — updated April 2026</div>
-        <div class="phase-row"><div class="phase-when">Now</div><div class="phase-what"><strong>Atlas live · both tracks active</strong><br>CKD Phase I deployed. HIV-IBBS concept note complete. Fulbright submitted. Meeting cadence confirmed.</div></div>
-        <div class="phase-row"><div class="phase-when">May 2026</div><div class="phase-what"><strong>Grant mechanism shortlist</strong><br>PA numbers, ranked by deadline. NIDDK R21 specific aims draft. PAR-24-329 preliminary application structure. ISN-SOROCA one-pager.</div></div>
-        <div class="phase-row"><div class="phase-when">Jun 2026</div><div class="phase-what"><strong>NIDDK R21 submission (standard deadline)</strong><br>Specific aims page + preliminary data from Phase I literature. UCU institutional letter. Budget framework.</div></div>
-        <div class="phase-row"><div class="phase-when">Wk 2–4</div><div class="phase-what"><strong>Student data extraction — Phase II</strong><br>UCU MPH and medical students trained to extract, standardise, and geocode study-level data. Each student = one citable publication.</div></div>
-        <div class="phase-row"><div class="phase-when">Wk 5–10</div><div class="phase-what"><strong>Data paper submission</strong><br>Real district data replaces synthetic estimates. UCU–Hopkins joint authorship. Made available to MoH and NPA.</div></div>
-        <div class="phase-row"><div class="phase-when">Wk 12</div><div class="phase-what"><strong>Mental health layer live</strong><br>Depression + CKD co-morbidity overlay. NPA deliverable. Directly addresses SUPRE 2025 "silent emergency" finding.</div></div>
+        <div class="method-box-title">Phase-by-phase plan — post 22 April meeting</div>
+        <div class="phase-row"><div class="phase-when">Now</div><div class="phase-what"><strong>Atlas live · both tracks active</strong><br>CKD Phase I deployed. HIV-IBBS concept note complete. Fulbright submitted. Action items from 22 Apr meeting confirmed.</div></div>
+        <div class="phase-row"><div class="phase-when">28 Apr</div><div class="phase-what"><strong>Grant shortlist due (Ukubona)</strong><br>Specific PA numbers, links to NIH calls, ranked by deadline. Focus narrowed to one primary call for joint decision at May 7 meeting.</div></div>
+        <div class="phase-row"><div class="phase-when">7 May</div><div class="phase-what"><strong>Decision meeting — lock primary grant</strong><br>Robert sends partner contacts beforehand. All parties review shortlist. Lock mechanism, assign sections, agree on UCU vs JHU lead PI question.</div></div>
+        <div class="phase-row"><div class="phase-when">7 May</div><div class="phase-what"><strong>PAR-24-329 AIDS deadline window</strong><br>If proceeding with HIV track as first submission, this is the final monthly AIDS cycle before the special status lapses. Application must be submission-ready.</div></div>
+        <div class="phase-row"><div class="phase-when">Jun 2026</div><div class="phase-what"><strong>NIDDK R21 submission (standard deadline)</strong><br>June 16, 2026. Specific aims page + Phase I atlas as preliminary data. UCU institutional letter. Budget framework.</div></div>
+        <div class="phase-row"><div class="phase-when">Wk 5–10</div><div class="phase-what"><strong>Student extraction + data paper</strong><br>UCU MPH students trained on extraction protocol. First district-level data paper drafted. UCU–Hopkins joint authorship.</div></div>
       </div>
     </div>
   </div>
@@ -980,8 +1025,8 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       <div class="deliv-card reveal">
         <div class="deliv-num">02</div>
         <div class="deliv-title">A Systematic Literature Review — UCU-Led</div>
-        <div class="deliv-body">Comprehensive peer-review-ready systematic review of CKD, hypertension, and diabetes in Uganda at district level. Submitted to open-access African journal. UCU faculty and students on the byline. Most complete such resource ever assembled for Uganda.</div>
-        <div class="deliv-tag">Submitted Wk 8 · UCU first-author</div>
+        <div class="deliv-body">Comprehensive peer-review-ready systematic review of CKD, hypertension, and diabetes in Uganda at district level. Submitted to open-access African journal. UCU faculty and students on the byline. Ukubona exploring AI tools to accelerate the first draft — discussed at 22 Apr meeting.</div>
+        <div class="deliv-tag">AI draft before 7 May · UCU first-author target Wk 8</div>
       </div>
       <div class="deliv-card reveal">
         <div class="deliv-num">03</div>
@@ -993,13 +1038,13 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
         <div class="deliv-num">04</div>
         <div class="deliv-title">Track 1 Grant Package — CKD / NIDDK R21</div>
         <div class="deliv-body">Polished NIH-format specific aims page and preliminary data summary. Ready for NIDDK June 2026 deadline. Adaptable for Wellcome Trust and ISN-SOROCA. Includes UCU letter-of-support template, budget framework, and NPA mental health co-morbidity brief.</div>
-        <div class="deliv-tag">June 2026 target</div>
+        <div class="deliv-tag">June 16 target deadline</div>
       </div>
       <div class="deliv-card reveal">
         <div class="deliv-num">05</div>
         <div class="deliv-title">Track 2 Grant Package — HIV-IBBS / PAR-24-329</div>
-        <div class="deliv-body">Boniface's AI-driven integrated bio-behavioral surveillance concept note, developed into a full pilot cluster-RCT application targeting PAR-24-329 (NIAID/NIDA). UCU + CCEPO + Hopkins named. Monthly deadline cycle means early submission is possible if concept note clears review.</div>
-        <div class="deliv-tag">PAR-24-329 · monthly deadlines</div>
+        <div class="deliv-body">Boniface's AI-driven integrated bio-behavioral surveillance concept note, developed into a full pilot R34 application targeting PAR-24-329 (NIDA). UCU + CCEPO + Hopkins named. May 7 deadline is the most strategic window — agreed at the April 22 meeting to evaluate this as first submission priority.</div>
+        <div class="deliv-tag">PAR-24-329 · May 7 AIDS deadline window</div>
       </div>
       <div class="deliv-card reveal">
         <div class="deliv-num">06</div>
@@ -1022,23 +1067,23 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
   <div class="reveal">
     <div class="section-kicker">Funding Strategy</div>
     <h2 class="section-title">Five Funding Paths —<br>Two Active Tracks</h2>
-    <p class="section-intro">The combination of Muzaale's NIH track record, Hopkins credibility, UCU's community access, Basaza's policy network, and Boniface's implementation science expertise opens funding channels inaccessible to any single institution. PAR-24-329 is the most time-sensitive open call.</p>
+    <p class="section-intro">The combination of Muzaale's NIH track record, Hopkins credibility, UCU's community access, Basaza's policy network, and Boniface's implementation science expertise opens funding channels inaccessible to any single institution. PAR-24-329 May 7 and NIDDK R21 June 16 are the two live windows.</p>
   </div>
 
   <div class="funding-grid reveal">
     <div class="funding-card highlight-card">
-      <div class="funding-nofo">NIH · PAR-24-329 · NIAID / NIDA · Monthly deadlines</div>
+      <div class="funding-nofo">NIH · PAR-24-329 · NIDA · AIDS Deadline 7 May 2026</div>
       <div class="funding-org">HIV Prevention, Treatment & Program Implementation — Sub-Saharan Africa</div>
-      <div class="funding-amount">Pilot R01 / R21 equivalent · Budget TBD per application</div>
+      <div class="funding-amount">R34 Planning Grant · up to $450K direct / 3 years</div>
       <div class="funding-fit">
-        <strong>Fit: Very strong. Most urgent open call.</strong> Boniface's AI-IBBS concept note is built directly for this NOFO. Three pre-specified domains: HIV prevention, treatment/adherence, and program implementation. Uganda-based cluster-randomised trial targeting PWUS — HIV prevalence 17% vs 6% national. UCU + CCEPO + US partners already named. HIV special status means monthly submission cycles — no need to wait for February/June/October standard windows.
+        <strong>Fit: Very strong. Most time-sensitive window.</strong> Boniface's AI-IBBS concept note is built directly for this NOFO. Three pre-specified domains: HIV prevention, treatment/adherence, program implementation. Uganda-based cluster-feasibility trial targeting PWUS — HIV prevalence 17% vs 6% national. Foreign orgs (UCU) explicitly eligible as direct applicants. The May 7 AIDS deadline is the last window before HIV applications move to standard June/Oct cycles — agreed at 22 Apr meeting to evaluate this as first submission priority.
       </div>
     </div>
     <div class="funding-card">
-      <div class="funding-org">NIH National Institute of Diabetes and Digestive and Kidney Diseases — R21</div>
-      <div class="funding-amount">$275,000 · 2 years</div>
+      <div class="funding-org">NIH NIDDK — R21 + PAR-25-068 (HIV-CKD Bridge)</div>
+      <div class="funding-amount">$275,000 · 2 years · Deadline June 16, 2026</div>
       <div class="funding-fit">
-        <strong>Fit: Very strong.</strong> Muzaale's K08-AG065520 is the direct methodological predecessor. The 12.5% vs 3.9% East/West prevalence differential is the study-section-winning premise. Standard deadlines: June 16 and October 16, 2026. Phase I atlas data is the preliminary data package.
+        <strong>Fit: Very strong.</strong> The 12.5% vs 3.9% East/West prevalence differential is the study-section-winning premise. PAR-25-068 adds the HIV-pathogenesis-within-NIDDK angle — directly bridges both tracks. Phase I atlas data is the preliminary data package.
       </div>
     </div>
     <div class="funding-card">
@@ -1059,7 +1104,7 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       <div class="funding-org">International Society of Nephrology — SOROCA Programme</div>
       <div class="funding-amount">$10,000 – $50,000 · 1 year</div>
       <div class="funding-fit">
-        <strong>Fit: Very strong for seed funding.</strong> ISN SOROCA is designed exactly for low-resource CKD mapping in Central/East Africa. UCU–Hopkins is the ideal partnership profile. SOROCA covers Phase I–II costs and generates the preliminary data for the NIDDK R21 — it is the logical first submission.
+        <strong>Fit: Very strong for seed funding.</strong> ISN SOROCA is designed exactly for low-resource CKD mapping in Central/East Africa. UCU–Hopkins is the ideal partnership profile. SOROCA covers Phase I–II costs and generates the preliminary data for the NIDDK R21 — it is the logical first submission if PAR-24-329 is deferred.
       </div>
     </div>
   </div>
@@ -1090,20 +1135,20 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
         </div>
 
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-left:3px solid var(--amber);padding:28px;margin-top:1rem;">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:1.2rem;">Context for shared readers · April 2026</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:1.2rem;">Post-meeting status · 22 April 2026</div>
           <div style="font-family:'Source Serif 4',serif;font-size:0.95rem;font-style:italic;color:rgba(247,242,233,0.75);line-height:1.75;">
-            This document now reflects two active grant tracks, a submitted Fulbright application, and a confirmed biweekly Thursday meeting cadence. The platform at <a href="https://ukubona-llc.github.io/landscape/" target="_blank" style="color:var(--amber);">ukubona-llc.github.io/landscape/</a> is live. The Fulbright roadmap is at <a href="https://ukubona-llc.github.io/boniface/" target="_blank" style="color:var(--amber);">ukubona-llc.github.io/boniface/</a>.
+            This document now reflects the confirmed action items from the April 22 meeting. Robert will send Boniface's contact details and partner emails to Ukubona before the next session. Platform at <a href="https://ukubona-llc.github.io/landscape/" target="_blank" style="color:var(--amber);">ukubona-llc.github.io/landscape/</a> is live. Fulbright roadmap at <a href="https://ukubona-llc.github.io/boniface/" target="_blank" style="color:var(--amber);">ukubona-llc.github.io/boniface/</a>. Next meeting: <strong style="color:var(--paper);">Tuesday 7 May, 4pm.</strong>
           </div>
         </div>
       </div>
 
       <div class="mou-terms">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,242,233,0.25);margin-bottom:0.5rem;">Proposed MOU Terms · Draft Framework</div>
-        <div class="mou-term"><div class="term-num">01</div><div class="term-content"><div class="term-title">Joint Attribution</div><div class="term-body">All publications and grant applications from the Atlas list Muzaale (Ukubona/JHU) and Basaza (UCU) as co-PIs. Track 2 publications: Mutatina as lead, Muzaale and Basaza as co-investigators.</div></div></div>
-        <div class="mou-term"><div class="term-num">02</div><div class="term-content"><div class="term-title">Data Sovereignty</div><div class="term-body">All Uganda-derived data jointly owned by Ukubona LLC and UCU. No external party may access raw data without written consent of both PIs. Processed outputs open access under Creative Commons.</div></div></div>
-        <div class="mou-term"><div class="term-num">03</div><div class="term-content"><div class="term-title">Capacity Transfer</div><div class="term-body">Ukubona provides the digital twin architecture to UCU at zero cost for the collaboration duration. UCU hosts Uganda data infrastructure and maintains institutional relationships with MoH and NPA.</div></div></div>
-        <div class="mou-term"><div class="term-num">04</div><div class="term-content"><div class="term-title">Grant Routing</div><div class="term-body">NIH and Wellcome grants routed through JHU or UCU per mechanism requirements. NPA partnerships routed through UCU. PAR-24-329 application: UCU + CCEPO as Uganda institutions, JHU as US partner.</div></div></div>
-        <div class="mou-term"><div class="term-num">05</div><div class="term-content"><div class="term-title">The Case Registry</div><div class="term-body">UCU clinical network feeds anonymised ESRD cases into the Atlas registry on an ongoing basis. Ukubona models the data. Both parties share derived insights for MoH and NPA policy advocacy.</div></div></div>
+        <div class="mou-term"><div class="term-num">01</div><div><div class="term-title">Joint Attribution</div><div class="term-body">All publications and grant applications from the Atlas list Muzaale (Ukubona/JHU) and Basaza (UCU) as co-PIs. Track 2 publications: Mutatina as lead, Muzaale and Basaza as co-investigators.</div></div></div>
+        <div class="mou-term"><div class="term-num">02</div><div><div class="term-title">Data Sovereignty</div><div class="term-body">All Uganda-derived data jointly owned by Ukubona LLC and UCU. No external party may access raw data without written consent of both PIs. Processed outputs open access under Creative Commons.</div></div></div>
+        <div class="mou-term"><div class="term-num">03</div><div><div class="term-title">Capacity Transfer</div><div class="term-body">Ukubona provides the digital twin architecture to UCU at zero cost for the collaboration duration. UCU hosts Uganda data infrastructure and maintains institutional relationships with MoH and NPA.</div></div></div>
+        <div class="mou-term"><div class="term-num">04</div><div><div class="term-title">Grant Routing</div><div class="term-body">NIH grants routed through JHU or UCU per mechanism requirements. NPA partnerships routed through UCU. PAR-24-329: UCU + CCEPO as Uganda institutions, JHU/Ukubona as US partner. Lead PI question to be resolved at 7 May meeting.</div></div></div>
+        <div class="mou-term"><div class="term-num">05</div><div><div class="term-title">The Case Registry</div><div class="term-body">UCU clinical network feeds anonymised ESRD cases into the Atlas registry on an ongoing basis. Ukubona models the data. Both parties share derived insights for MoH and NPA policy advocacy.</div></div></div>
       </div>
     </div>
   </div>
@@ -1129,7 +1174,7 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
       <div class="team-role">Co-PI · Uganda Research, Policy & UCU Pipeline</div>
       <div class="team-name">Prof. Robert Basaza</div>
       <div class="team-affil">Uganda Christian University · School of Public Health</div>
-      <div class="team-bio">Physician and health economist with extensive experience in health systems research across East Africa. Basaza leads Uganda-based operations, manages the UCU student pipeline, and maintains relationships with MoH, NPA, and district health offices. His immediate correction of the district count — from 135 to 146 — was the first proof of operational engagement. Co-PI on all applications.</div>
+      <div class="team-bio">Physician and health economist with extensive experience in health systems research across East Africa. Basaza leads Uganda-based operations, manages the UCU student pipeline, and maintains relationships with MoH, NPA, and district health offices. His immediate correction of the district count — from 135 to 146 — was the first proof of operational engagement. Confirmed at the 22 April meeting to send partner contact details before 7 May.</div>
     </div>
     <div class="team-card">
       <div class="team-role">Track 2 Lead · HIV-IBBS / Implementation Science</div>
@@ -1144,8 +1189,8 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="footer-hed">Two tracks.<br>One atlas.<br>Build it now.</div>
-    <p class="footer-body">The CKD burden is not hypothetical. The HIV-CKD pathway is not speculative. The $55,000 transplant case is not a coincidence — it is the system announcing itself. PAR-24-329 is open. The NIDDK June deadline is real. The MOU is next. The atlas is already live.</p>
+    <div class="footer-hed">Two tracks.<br>One atlas.<br>Next meeting:<br>7 May.</div>
+    <p class="footer-body">Action items confirmed. Grant shortlist due 28 April. Robert sends partner contacts. All review the shortlist. 7 May meeting: lock the primary mechanism. The May 7 AIDS deadline is the live window. The June 16 NIDDK deadline follows. The atlas is already live.</p>
   </div>
   <div class="footer-links">
     <a href="https://ukubona-llc.github.io/landscape/" target="_blank">↗ Live Disease Atlas</a>
@@ -1154,7 +1199,7 @@ footer{background:var(--ink);color:var(--paper);padding:64px;display:grid;grid-t
     <a href="https://grantome.com/grant/NIH/K08-AG065520-01" target="_blank">↗ NIH K08 Grant Record</a>
     <a href="https://ukubona-llc.github.io" target="_blank">↗ Ukubona LLC</a>
   </div>
-  <div class="footer-copy">© 2026 Ukubona LLC × Uganda Christian University · Kampala, Uganda · 0°19′N 32°35′E · Updated April 2026 · Two active grant tracks: CKD/NIDDK and HIV-IBBS/PAR-24-329 · Meeting cadence: every two weeks, Thursdays 4pm · Fulbright submitted 10 April 2026</div>
+  <div class="footer-copy">© 2026 Ukubona LLC × Uganda Christian University · Kampala, Uganda · 0°19′N 32°35′E · Post-meeting update 22 April 2026 · Action items confirmed · Next meeting Tuesday 7 May 4pm · Grant shortlist due Monday 28 April · PAR-24-329 AIDS deadline 7 May · NIDDK R21 June 16</div>
 </footer>
 
 <!-- SCRIPTS -->

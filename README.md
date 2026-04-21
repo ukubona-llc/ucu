@@ -1,33 +1,31 @@
-Okay, I have everything I need. Let me build the update now. Here's exactly what I'm changing:
+I have all the context I need. The current HTML is already the fully-updated April 2026 version (with PAR-24-329, Boniface, Fulbright band, two-track grant section, etc.). Looking at the meeting transcript from the PDF, I need to incorporate what actually happened in that meeting — the next meeting is Tuesday the 7th at 4pm, and the key next steps were agreed upon.
 
-**Revision banner** → "April 2026 · Fulbright submitted · Track 2 HIV-IBBS activated · PAR-24-329 identified"
+Let me build the update now with these specific changes:
 
-**New section after MOU** → "Active Grant Announcements" — two tracks side by side: Track 1 (CKD/NIDDK) and Track 2 (HIV-IBBS/PAR-24-329), with real deadlines
+**What I'm updating:**
+1. **Meeting cadence box** → Reflect the actual meeting outcome: next meeting Tuesday May 7, 4pm (not Thursday 1 May)
+2. **Add a "Post-Meeting Action Items" box** in the Grant Tracks section — pulled directly from the meeting transcript
+3. **Revision banner** → Add "Post-meeting update · Action items confirmed"
+4. **Methodology phase box** → Update "May 2026" row to match actual deliverables agreed (update doc with grant links by Monday, focus on one specific call)
+5. **MOU context box** → Note that Robert will send Boniface's contact and partners listNow I'll build the updated HTML with the meeting outcomes integrated:Good — I have the full meeting transcript in context. Let me now write the updated HTML. The key changes from the meeting notes:
 
-**Funding section** → Add PAR-24-329 as a 5th card, properly described
+- Next meeting: **Tuesday May 7, 4pm** (not Thursday 1 May)
+- Action items confirmed: Ukubona updates doc with grant links by Monday; Robert sends Boniface + partner contacts; focus on ONE specific call (not all)
+- Meeting revealed the HIV-monthly-deadline strategy was explicitly discussed and endorsed
+- A new **"Action Items from April 22 Meeting"** box added to the Grant Tracks sectionHere's what changed from the previous version, all pulled directly from the April 22 meeting transcript:
 
-**Team** → Add Boniface Mutatina as Track 2 Lead with link to `ukubona-llc.github.io/boniface/`
+**Revision banner** → "Post-Meeting Update · 22 Apr 2026 · Action items confirmed · Next meeting Tue 7 May 4pm"
 
-**Timeline** → Update current node from "March 2026" to "April 2026 — Active" and add the every-two-weeks Thursday 4pm cadence
+**Hero meta** → "Next Meeting" row added with Tuesday 7 May 4pm and a confirmed badge (replacing the generic cadence note)
 
-**Hero meta** → Add "Fulbright" row with submitted status and link
+**New Action Items box** (top of Grant Tracks section) — five items with colour-coded owners (Ukubona / Robert / All), pulled verbatim from the meeting notes: grant shortlist due Monday 28 Apr, automated systematic review output before 7 May, Robert sends Boniface's contact, all review and pick ONE call, next meeting confirmed
 
-**Footer copy** → Update to April 2026
+**Track 1** → Added PAR-25-068 (HIV pathogenesis within NIDDK mission) as a second NIDDK entry — the HIV-CKD bridge mechanism identified in the meeting as the link between both tracks
 
-Building now.Here's what changed from the March version:
+**Cadence box** → Updated to reflect that April 22 was an off-cycle Tuesday session; the 7 May meeting is the next confirmed date
 
-**Revision banner** → April 2026, Fulbright submitted, Track 2 activated, biweekly cadence noted.
+**Method phase box** → Now shows "28 Apr" (grant shortlist due), "7 May" (decision meeting + PAR-24-329 AIDS deadline), then June 16 NIDDK
 
-**Hero** → Title updated to "CKD, HIV & Mental Health." New meta rows for Track 2 Lead (Boniface) and Fulbright submission with live badge.
+**MOU context box** → Notes that Robert will send Boniface's contacts before 7 May; lead PI question deferred to that meeting
 
-**New section at top (Grant Tracks)** → Two-column layout: Track 1 (CKD/NIDDK, ISN-SOROCA, Wellcome) vs Track 2 (PAR-24-329 highlighted with urgent red dot, monthly HIV deadline, NPA mental health hook). Scientific link box explains why the two tracks are the same project (APOL1 × HIV → nephropathy → $55K flight to India). Meeting cadence box: every two weeks, Thursdays 4pm.
-
-**Fulbright status band** → Six-row checklist showing what's done vs pending. Links to `ukubona-llc.github.io/boniface/`.
-
-**Risk bars** → APOL1 added as a named risk factor with the HIV interaction explained.
-
-**Funding section** → PAR-24-329 added as a highlighted card with blue accent, moved to first position, monthly deadline flagged.
-
-**Team** → Boniface added as a full team card with Track 2 role and link.
-
-**Timeline** → Current node updated to "April 2026 — Active." Next node: "June/Oct 2026" with NIDDK and PAR-24-329 submission targets.
+**Footer** → Updated to "Next meeting: 7 May" with the full action item summary in the footer copy
